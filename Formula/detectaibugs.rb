@@ -12,18 +12,18 @@ class Detectaibugs < Formula
 
   bottle do
     root_url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/vTEST"
-    sha256 cellar: any_skip_relocation, arm64_sonoma: "3a930774b116dcb1ed85756631e6ea858e7ec399a56afa609c011955ed86dec9"
-    sha256 cellar: any_skip_relocation, ventura: "0723d178cfaca45221aa7ec4a4f5dbfab19ecfd2e7a5058ea6ee6cb8ada42f44"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "31a98be46f53f393cdc98ef2555a465c0144a2bb0ad5ca505f921121db798e42"
+    sha256 cellar: :any_skip_relocation, ventura: "fa296515eafd68368b5eca2f7bf08809a05d260c99f6bb1138a4202f41cd791a"
   end
 
   on_arm do
     url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/vTEST/detectaibugs-darwin-arm64.tar.gz"
-    sha256 "c0bebfc830899557853e9e7dcc3620d0ee19b6bfcc65df3684e0878d1e8ac88b"
+    sha256 "833dad67c4b1aab0d2cacc5a518ae56f1a39475c91f55034910e54733b099a2f"
   end
 
   on_intel do
     url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/vTEST/detectaibugs-darwin-amd64.tar.gz"
-    sha256 "b7f7d00e14c8d02c197f29f1e0df6da59aab7db2bed869ced139dec3089f733b"
+    sha256 "9066649c472b9995780475ec0160792487dbc7055c10bc1f44cfc9845f29b4c9"
   end
 
   # Optional dependencies - at least one should be installed
