@@ -1,15 +1,15 @@
 class Detectaibugs < Formula
   desc "AI-powered code analysis tool"
   homepage "https://github.com/discoveraibugs/homebrew-codex-tap"
-  version "2.0.0"
+  version "2.0.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/discoveraibugs/homebrew-codex-tap/releases/download/v2.0.0/detectaibugs-darwin-arm64.tar.gz"
-      sha256 "7e421f13d037f678b2fd82c3e3174a7a28b8c7a26812bfb6cb2695b9a9902232"
+      url "https://github.com/discoveraibugs/homebrew-codex-tap/releases/download/v2.0.1/detectaibugs-darwin-arm64.tar.gz"
+      sha256 "340fb201753fe4326a1b634855452c5a2b055d13d0ed31bb7248415017241365"
     else
-      url "https://github.com/discoveraibugs/homebrew-codex-tap/releases/download/v2.0.0/detectaibugs-darwin-amd64.tar.gz"
-      sha256 "9a5a9fce8924d84e1c881a65198f3736b1c19c9dd068b6aed22374dc43e8ea9e"
+      url "https://github.com/discoveraibugs/homebrew-codex-tap/releases/download/v2.0.1/detectaibugs-darwin-amd64.tar.gz"
+      sha256 "13c1a555e537ff19ea12be4b3c2153253474c446736bb55b863cc98dd27e1e26"
     end
   end
 
