@@ -26,8 +26,9 @@ brew uninstall detectaibugs
 brew untap detectaibugs/tap  # or whatever the old tap was
 
 # Install v2 (fresh start!)
-brew tap discoveraibugs/codex-tap
+brew tap detectaibugs/codex-tap
 brew install detectaibugs
+detectaibugs --setup-codex
 ```
 
 ---
@@ -37,8 +38,9 @@ brew install detectaibugs
 ### Installation
 
 ```bash
-brew tap discoveraibugs/codex-tap
+brew tap detectaibugs/codex-tap
 brew install detectaibugs
+detectaibugs --setup-codex
 ```
 
 ### Setup
@@ -92,8 +94,8 @@ detectaibugs version
 # Configure API key
 detectaibugs set-api-key=YOUR_KEY
 
-# Reinstall slash command
-detectaibugs reinstall-codex-action
+# Install/reinstall slash command
+detectaibugs --setup-codex
 
 # Reinstall git reminders
 detectaibugs reinstall-git-reminder
@@ -103,7 +105,7 @@ detectaibugs reinstall-git-reminder
 
 ## 🤝 Support
 
-- **Issues**: [Report bugs or request features](https://github.com/discoveraibugs/homebrew-codex-tap/issues)
+- **Issues**: [Report bugs or request features](https://github.com/detectaibugs/homebrew-codex-tap/issues)
 - **Website**: [detectaibugs.org](https://detectaibugs.org)
 - **API Keys**: [detectaibugs.org/api-keys](https://detectaibugs.org/api-keys)
 - **Email**: support@detectaibugs.org
@@ -123,5 +125,5 @@ Traditional linters catch syntax errors. DetectAIBugs catches **logic errors, se
 **Install now and never ship bugs again!** 🚀
 
 ```bash
-brew tap discoveraibugs/codex-tap && brew install detectaibugs
+brew tap detectaibugs/codex-tap && brew install detectaibugs && detectaibugs --setup-codex
 ```
