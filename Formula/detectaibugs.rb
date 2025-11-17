@@ -1,17 +1,27 @@
-class Detectaibugs < Formula
-  desc "AI-powered code analysis tool"
-  homepage "https://github.com/discoveraibugs/homebrew-codex-tap"
-  version "2.0.1"
+# 🟡 SECURITY CLASSIFICATION: PUBLIC - USER FACING
+# This file is distributed in public Homebrew taps and visible to all users.
+# DO NOT add implementation details, API endpoints, or orchestration architecture.
+# Focus on user benefits only. See SECURITY_CLASSIFICATION.md for guidelines.
 
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/discoveraibugs/homebrew-codex-tap/releases/download/v2.0.1/detectaibugs-darwin-arm64.tar.gz"
-      sha256 "340fb201753fe4326a1b634855452c5a2b055d13d0ed31bb7248415017241365"
-    else
-      url "https://github.com/discoveraibugs/homebrew-codex-tap/releases/download/v2.0.1/detectaibugs-darwin-amd64.tar.gz"
-      sha256 "13c1a555e537ff19ea12be4b3c2153253474c446736bb55b863cc98dd27e1e26"
-    end
+class Detectaibugs < Formula
+  desc "AI-powered bug detection for code quality assurance"
+  homepage "https://detectaibugs.org"
+  license "MIT"
+  version "2.0.2"
+
+  on_arm do
+    url "https://github.com/detectaibugs/homebrew-claude-tap/releases/download/v2.0.2/detectaibugs-darwin-arm64.tar.gz"
+    sha256 "7506c69782080fc97f9bf4859a4f561a31bdfd9cdc64f3fcf715bdef84f7e065"
   end
+
+  on_intel do
+    url "https://github.com/detectaibugs/homebrew-claude-tap/releases/download/v2.0.2/detectaibugs-darwin-amd64.tar.gz"
+    sha256 "53be5b4916b22fb064e0f5ed9d9a01a9e999984ec97327aa72b42558eca4fd11"
+  end
+
+  # Optional dependencies - at least one should be installed
+  # depends_on "anthropics/claude/claude" => :optional
+  # depends_on "openai/codex/codex" => :optional
 
   def install
     if Hardware::CPU.arm?
@@ -19,19 +29,52 @@ class Detectaibugs < Formula
     else
       bin.install "detectaibugs-darwin-amd64" => "detectaibugs"
     end
-
-    # Install supporting files
-    pkgshare.install "detectaibugs-command-claude.md"
-    pkgshare.install "detectaibugs-command-codex.md"
-    pkgshare.install "post-install.sh"
+    prefix.install "detectaibugs-command-claude.md"
+    prefix.install "detectaibugs-command-codex.md"
   end
 
-  def post_install
-    # Auto-detect and install slash commands for Claude/Codex
-    system "bash", "#{pkgshare}/post-install.sh" if File.exist?("#{pkgshare}/post-install.sh")
+  def caveats
+    <<~EOS
+      detectaibugs has been installed!
+
+      SETUP (choose one):
+
+      For Claude Code users:
+        detectaibugs --setup-claude
+
+      For OpenAI Codex users:
+        detectaibugs --setup-codex
+
+      Then configure your API key:
+        detectaibugs set-api-key=your-api-key
+        Get your key at: https://detectaibugs.org/api-keys
+
+      USAGE:
+      After setup, run in your AI assistant:
+        claude /detectaibugs    # If you have Claude Code
+        codex /detectaibugs     # If you have OpenAI Codex
+
+      WORKFLOW:
+      1. Make code changes
+      2. Run /detectaibugs to analyze
+      3. Review and implement suggested fixes
+      4. Run /detectaibugs again to verify
+
+      For more information:
+        https://detectaibugs.org/docs
+
+      REINSTALL:
+      If slash commands need to be reinstalled:
+        detectaibugs --setup-claude
+        detectaibugs --setup-codex
+
+      For help:
+        detectaibugs help
+    EOS
   end
 
   test do
-    assert_match "detectaibugs v#{version}", shell_output("#{bin}/detectaibugs version")
+    assert_match "detectaibugs", shell_output("#{bin}/detectaibugs version")
+    assert_match "USAGE", shell_output("#{bin}/detectaibugs help")
   end
 end
