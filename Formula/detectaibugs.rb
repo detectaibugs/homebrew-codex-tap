@@ -7,23 +7,23 @@ class Detectaibugs < Formula
   desc "AI-powered bug detection for code quality assurance"
   homepage "https://detectaibugs.org"
   license "MIT"
-  version "2.0.6"
+  version "2.0.7"
 
 
   bottle do
-    root_url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.0.6"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "766e91b2f99e9fe300502f2b6a1a328fd75d77e7d109fe94dd1c89c90d346113"
-    sha256 cellar: :any_skip_relocation, ventura: "05ecc8cf1f6fbb7fb87801e06d485280cfd3c518412e0237281e952391db2056"
+    root_url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.0.7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "2d33f69117dec167b5eb68517a8211714dec14c0930bce83b80419c8917bce55"
+    sha256 cellar: :any_skip_relocation, ventura: "fd042c1af3e75c1a382fb48bdb87094968d301b506f04758adcae0373d573dfe"
   end
 
   on_arm do
-    url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.0.6/detectaibugs-darwin-arm64.tar.gz"
-    sha256 "a67cb66de12ae07785fad7e375ee0efd064b54b23262b64b15aea791dbfb2e02"
+    url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.0.7/detectaibugs-darwin-arm64.tar.gz"
+    sha256 "edcff62e383d33072eb8d5ea8f1ced791cb0c4498ca0a9c4a3e90898ba8cd456"
   end
 
   on_intel do
-    url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.0.6/detectaibugs-darwin-amd64.tar.gz"
-    sha256 "3b6e0db5324dc25dc7c4054fa8b4ae82e822a0168770e09a65777ba4b43988cf"
+    url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.0.7/detectaibugs-darwin-amd64.tar.gz"
+    sha256 "275a48b9155f28df32510f603cf9e34c8d6fb1984f8c6592d9871a0b9e5ba6f0"
   end
 
   # Optional dependencies - at least one should be installed
@@ -67,16 +67,13 @@ class Detectaibugs < Formula
       3. Review and implement suggested fixes
       4. Run /detectaibugs again to verify
 
-      For more information:
-        https://detectaibugs.org/docs
+      *** For more information or help:
+        detectaibugs help
 
       REINSTALL:
       If slash commands need to be reinstalled:
         detectaibugs --setup-claude
         detectaibugs --setup-codex
-
-      For help:
-        detectaibugs help
     EOS
   end
 
