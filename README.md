@@ -1,8 +1,36 @@
+# ⚠️ CODEX SUPPORT PAUSED IN V2.0
+
+<div align="center">
+
+## 🔴 IMPORTANT NOTICE 🔴
+
+**Codex support in the V2 series has been paused until v2.1.0**
+
+**Expected Release: November 26th, 2025**
+
+---
+
+**In the meantime, please use DetectAIBugs with Claude Code:**
+
+```bash
+brew tap detectaibugs/claude-tap
+brew install detectaibugs
+detectaibugs --setup-claude
+```
+
+Visit: [github.com/detectaibugs/homebrew-claude-tap](https://github.com/detectaibugs/homebrew-claude-tap)
+
+---
+
+</div>
+
 # 🎉 DetectAIBugs v2.0 - Now with OpenAI Codex Support!
 
 > **⚡ Major Upgrade:** DetectAIBugs v2.0 is a complete rewrite in Go, bringing massive performance improvements, better security, and seamless integration with OpenAI Codex!
 >
 > **📅 Released:** November 17, 2025
+>
+> **⚠️ Note:** Codex support paused until v2.1.0 (Nov 26th)
 
 Official Homebrew tap for **DetectAIBugs CLI** - AI-powered code analysis tool for OpenAI Codex users.
 
