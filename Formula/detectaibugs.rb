@@ -7,23 +7,23 @@ class Detectaibugs < Formula
   desc "AI-powered bug detection for code quality assurance"
   homepage "https://detectaibugs.org"
   license "MIT"
-  version "2.0.7"
+  version "2.0.9"
 
 
   bottle do
-    root_url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.0.7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "2d33f69117dec167b5eb68517a8211714dec14c0930bce83b80419c8917bce55"
-    sha256 cellar: :any_skip_relocation, ventura: "fd042c1af3e75c1a382fb48bdb87094968d301b506f04758adcae0373d573dfe"
+    root_url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.0.9"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "a4b1c27f0199984e4c3a757d6de7a1ab1097e6edad4b4671dff7b20d67d6d2d2"
+    sha256 cellar: :any_skip_relocation, ventura: "e81e2109386e9d42ca2d7151da5f6cb01f41cce3dcdb35d7a5e0d70afb8f8fbf"
   end
 
   on_arm do
-    url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.0.7/detectaibugs-darwin-arm64.tar.gz"
-    sha256 "edcff62e383d33072eb8d5ea8f1ced791cb0c4498ca0a9c4a3e90898ba8cd456"
+    url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.0.9/detectaibugs-darwin-arm64.tar.gz"
+    sha256 "17c7256ab929ba2216b4692c2504941746335f86a63ddf666ad2d749223b9967"
   end
 
   on_intel do
-    url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.0.7/detectaibugs-darwin-amd64.tar.gz"
-    sha256 "275a48b9155f28df32510f603cf9e34c8d6fb1984f8c6592d9871a0b9e5ba6f0"
+    url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.0.9/detectaibugs-darwin-amd64.tar.gz"
+    sha256 "0b892e9c562d9383e3cda80e92884031e5625a12269fa25b735361814a6c29d8"
   end
 
   # Optional dependencies - at least one should be installed
@@ -58,8 +58,8 @@ class Detectaibugs < Formula
 
       USAGE:
       After setup, run in your AI assistant:
-        claude /detectaibugs    # If you have Claude Code
-        codex /detectaibugs     # If you have OpenAI Codex
+        claude /detectaibugs          # If you have Claude Code
+        codex /detectaibugs           # Shortcut for /prompts:detectaibugs
 
       WORKFLOW:
       1. Make code changes
