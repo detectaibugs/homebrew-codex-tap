@@ -7,23 +7,23 @@ class Detectaibugs < Formula
   desc "AI-powered bug detection for code quality assurance"
   homepage "https://detectaibugs.org"
   license "MIT"
-  version "2.0.9"
+  version "2.1.2"
 
 
   bottle do
-    root_url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.0.9"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "a4b1c27f0199984e4c3a757d6de7a1ab1097e6edad4b4671dff7b20d67d6d2d2"
-    sha256 cellar: :any_skip_relocation, ventura: "e81e2109386e9d42ca2d7151da5f6cb01f41cce3dcdb35d7a5e0d70afb8f8fbf"
+    root_url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.1.2"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "4163e55389e9371afeb9a621c412290e4189547e6a0ce86e4af9cfc200c81b80"
+    sha256 cellar: :any_skip_relocation, sequoia: "35d8bbaa6613afc7a5097159c3af566218f6e223dda6144c6d1554c6db0bacb9"
   end
 
   on_arm do
-    url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.0.9/detectaibugs-darwin-arm64.tar.gz"
-    sha256 "17c7256ab929ba2216b4692c2504941746335f86a63ddf666ad2d749223b9967"
+    url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.1.2/detectaibugs-darwin-arm64.tar.gz"
+    sha256 "a9ac94ea9caec2e45e8b018511512badb62c2bb5b5294be240534b6109c2199a"
   end
 
   on_intel do
-    url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.0.9/detectaibugs-darwin-amd64.tar.gz"
-    sha256 "0b892e9c562d9383e3cda80e92884031e5625a12269fa25b735361814a6c29d8"
+    url "https://github.com/detectaibugs/homebrew-codex-tap/releases/download/v2.1.2/detectaibugs-darwin-amd64.tar.gz"
+    sha256 "fc9f7b2fdf1bf0d5d808401aaac723378ac0780d2d1ed7ef613607a667312912"
   end
 
   # Optional dependencies - at least one should be installed
